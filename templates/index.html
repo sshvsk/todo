@@ -1,0 +1,20 @@
+<!-- index.html -->
+{% extends "base.html" %}
+
+{% block title %}NOTES{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Hello, Alex</h1>
+    {#<div class="row justify-content-md-center">#}
+      <div class="row">
+      {% for note in notes %}
+          <div class="col-4">
+            {% include "note.html" %}
+          </div>
+      {% endfor %}
+      {% include "add_note.html" %}
+      {#</div>  #}
+    </div>
+
+{% endblock %}
